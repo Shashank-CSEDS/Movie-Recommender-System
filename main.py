@@ -207,11 +207,11 @@ def main():
         st.session_state['page_number'] = i
 
     # Use Main context manager to get data
-    with Main() as bot:
+   with Main() as bot:
         bot.main_()
-        nonlocal new_df, movies
         new_df, movies, _ = bot.getter()
         initial_options()
+
 
 if __name__ == '__main__':
     main()
